@@ -1,0 +1,46 @@
+.title,
+.logo {
+    font-weight: 800;
+}
+
+.logo {
+    font-size: 80px;
+}
+
+header {
+    padding-top: 10px;
+}
+
+header,
+nav {
+    display: grid;
+    place-content: center;
+}
+
+nav {
+    grid-auto-flow: column;
+    margin-top: 30px;
+    column-gap: 10px;
+}
+
+nav button {
+    font-size: 22px;
+    border: 0;
+    background-color: transparent;
+    margin-bottom: 4px;
+}
+
+nav button text {
+    padding: 40px;
+}
+
+nav button.selected {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    text-decoration-color: #0FDFBF;
+}
+
+
+
+

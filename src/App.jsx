@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import Home from './Home';
-import Store from './Store';
-import Menu from './Menu';
+import About from './About';
+import Portfolio from './Portfolio';
 
 const App = () => {
-  const [selectedTab, setSelectedTab] = useState('home');
+  const [selectedTab, setSelectedTab] = useState('portfolio');
 
   const selectTab = (tab) => {
     setSelectedTab(tab);
@@ -13,33 +13,33 @@ const App = () => {
   return (
     <div>
       <header>
-        <h1 className="logo">Rafael Vecchi</h1>
+        <h1 className="logo">Rafael Vecchi Silva</h1>
+        <p className="sub-logo">Desenvolvedor de Software (JavaScript - React & Node)</p>
         <nav>
-          <button
+          {/* <button
             className={`tab-btn ${selectedTab === 'home' ? 'selected' : ''}`}
             onClick={() => selectTab('home')}
           >
             Home
+          </button> */}
+          <button
+            className={`tab-btn ${selectedTab === 'portfolio' ? 'selected' : ''}`}
+            onClick={() => selectTab('portfolio')}
+          >
+            Portfolio
           </button>
           <button
-            className={`tab-btn ${selectedTab === 'menu' ? 'selected' : ''}`}
-            onClick={() => selectTab('menu')}
+            className={`tab-btn ${selectedTab === 'about' ? 'selected' : ''}`}
+            onClick={() => selectTab('about')}
           >
-            Menu
-          </button>
-          <button
-            className={`tab-btn ${selectedTab === 'store' ? 'selected' : ''}`}
-            onClick={() => selectTab('store')}
-          >
-            Store
+            Sobre
           </button>
         </nav>
       </header>
-      {/* <div className="image-container"></div> */}
       <div id="content">
-        {selectedTab === 'home' && <Home />}
-        {selectedTab === 'menu' && <Menu />}
-        {selectedTab === 'store' && <Store />}
+        {/* {selectedTab === 'home' && <Home />} */}
+        {selectedTab === 'portfolio' && <Portfolio />}
+        {selectedTab === 'about' && <About />}
       </div>
     </div>
   );
