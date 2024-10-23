@@ -7,40 +7,60 @@
     font-size: 80px;
 }
 
-header {
-    padding-top: 10px;
-}
-
 header,
 nav {
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+}
+
+header {
+    padding-top: 10px;
+    flex-direction: column;
 }
 
 nav {
-    grid-auto-flow: column;
-    margin-top: 30px;
-    column-gap: 10px;
+    flex-direction: row;
 }
 
 nav button {
+    font-family: var(--font);
+    font-weight: 400;
+    color: black;
     font-size: 22px;
-    border: 0;
-    background-color: transparent;
+    border: 2px solid black;
+    border-radius: var(--general-border-radius);
+    background-color: #00000000;
     margin-bottom: 4px;
+    padding: 6px 24px;
 }
+
+nav > button:first-of-type {
+border-bottom-right-radius: 0;
+border-top-right-radius: 0;
+}
+nav > button:nth-of-type(2) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    }
 
 nav button text {
     padding: 40px;
 }
 
 nav button.selected {
-    text-decoration-line: underline;
+    /* text-decoration-line: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 4px;
-    text-decoration-color: #0FDFBF;
+    text-decoration-color: var(--accent); */
+    background-color: black;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+    
 }
 
 
-
+nav button:hover {
+    cursor: pointer;
+}
 

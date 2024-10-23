@@ -22,4 +22,37 @@
 
 .left-side img {
     width: 55%;
+    filter: drop-shadow(-2px 5px 4px rgb(0, 0, 0, 0.2));
+}
+
+.about-content>div {
+    border-radius: var(--general-border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 40px;
+}
+
+.right-side h2 {
+    background-color: black;
+    border-radius: var(--general-border-radius);
+    color: white;
+    padding: 6px 14px;
+}
+
+.right-side h3 {
+    font-size: 32px;
+}
+
+.date {
+    font-size: 16px;
+    margin: 0;
+}
+.institution {
+    margin: 0;
+}
+
+.entry {
+    box-shadow: var(--card-shadow);
+    border-radius: var(--general-border-radius);
+    padding: 16px 48px;
+    margin: 29px 32px 21px 8px;
 }

@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import ProjectCard from './ProjectCard';
 import admindashboard from './assets/admindashboard.png';
 import calc from './assets/calc-bigger.png';
 import cvapp from './assets/cvapp.png';
@@ -10,9 +12,11 @@ import sorvete from './assets/sorvete.png';
 import tictactoe from './assets/tictactoe.png';
 import timedcarousel from './assets/TIMEDAUTO-carrossel-eva.png';
 import todolist from './assets/todolist.png';
-import ProjectCard from './ProjectCard';
 
 const Portfolio = () => {
+
+  const [sortOrder, setSortOrder] = useState('desc'); // 'asc' for ascending, 'desc' for descending
+
   const projects = [
     {
       title: 'Pawfect Memory',
@@ -93,22 +97,46 @@ const Portfolio = () => {
     },
   ];
 
+  // convert "month" string from project to Date objects for sorting
+  const parseMonth = (monthString) => {
+    const [month, year] = monthString.split(' ');
+    return new Date(`${year}-${month}`);
+  };
+
+  const sortedProjects = [...projects].sort((a, b) => {
+    const dateA = parseMonth(a.month);
+    const dateB = parseMonth(b.month);
+    return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+  });
+
+  const toggleSortOrder = () => {
+    setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
+  };
+
+
   return (
     <>
       <div className="portfolio-description">
         <p>
           Estes são alguns dos projetos que desenvolvi enquanto estudo o The Odin Project. O foco do
           curso é ensinar os fundamentos essenciais para ser um desenvolvedor fullstack, com uma
-          abordagem muito prática: desenvolver projetos do zero, sem ter "ninguém segurando a sua
-          mão". Ao longo dos últimos meses, tenho concluído pelo menos um projeto por mês, sempre
+          abordagem muito prática: desenvolver projetos do zero, sem ter ninguém segurando a sua
+          mão. Ao longo dos últimos meses, tenho concluído pelo menos um projeto por mês, sempre
           buscando aplicar e solidificar o que estou aprendendo. Nem todos os projetos aparecem
           aqui, alguns ficaram fora por serem mais voltados para conceitos teóricos ou backend, como
           algoritmos e recursão. Explore cada um e veja como a prática moldou meu caminho no
           desenvolvimento web.
         </p>
       </div>
+
+      <div className="sort-buttons">
+        <button className='button-56' onClick={toggleSortOrder}>
+          Ordem: {sortOrder === 'asc' ? 'Mais antigos' : 'Mais recentes'}
+        </button>
+      </div>
+
       <div className="portfolio-grid">
-        {projects.map((project, index) => (
+        {sortedProjects.map((project, index) => (
           <ProjectCard project={project} key={index} />
         ))}
       </div>
