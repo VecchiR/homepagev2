@@ -1,0 +1,50 @@
+body {
+    background-color: var(--back);
+}
+
+.project-card,
+.left-side,
+.right-side {
+    background-color: var(--card);
+}
+
+.project-description {
+    color: var(--theblack);
+}
+
+.project-image-container p {
+    color: var(--back);
+}
+
+.entry {
+    background-color: var(--entry);
+}
+
+.right-side h2 {
+    background-color: var(--theblack);
+    color: var(--back);
+}
+
+nav button {
+    background-color: var(--back);
+    color: var(--theblack);
+    border-color: var(--theblack);
+}
+
+nav button.selected {
+    background-color: var(--card);
+    color: var(--back);
+
+}
+
+.sort-buttons button {
+    background-color: var(--theblack);
+    color: var(--back);
+    border-color: var(--theblack);
+
+}
+
+h1.logo {
+    color: var(--card);
+    text-shadow: -3px 2px black;
+}

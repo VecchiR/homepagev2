@@ -25,11 +25,9 @@ nav {
 nav button {
     font-family: var(--font);
     font-weight: 400;
-    color: black;
     font-size: 22px;
-    border: 2px solid black;
+    border: 2px solid;
     border-radius: var(--general-border-radius);
-    background-color: #00000000;
     margin-bottom: 4px;
     padding: 6px 24px;
 }
@@ -48,15 +46,8 @@ nav button text {
 }
 
 nav button.selected {
-    /* text-decoration-line: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 4px;
-    text-decoration-color: var(--accent); */
-    background-color: black;
     width: 100%;
-    color: white;
     font-weight: 500;
-    
 }
 
 

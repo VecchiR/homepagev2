@@ -11,7 +11,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #f9f9f9;
   border-radius: var(--general-border-radius);
   padding: 15px;
   text-align: center;
@@ -48,7 +47,6 @@
 
 .project-description {
   font-size: 1rem;
-  color: #666;
 }
 
 .project-description {
@@ -69,7 +67,6 @@
   position: absolute;
   opacity: 0;
   font-size: 26px;
-  color: #ffffffe4;
   font-weight: 400;
   display: flex;
   align-items: center;
@@ -89,11 +86,9 @@
 .sort-buttons button{
   font-family: var(--font);
   font-weight: 500;
-  color: rgb(255, 255, 255);
   font-size: 22px;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid;
   border-radius: var(--general-border-radius);
-  background-color: #000000;
   margin-bottom: 4px;
   padding: 6px 24px;
   cursor: pointer;
@@ -101,3 +96,17 @@
 
 
 
+.left-right ul{
+  margin: 0;
+  padding: 0;
+}
+
+.left-right ul li {
+  display: flex;
+  align-items: center;
+}
+
+.left-right ul li img {
+  width: 36px;
+  margin-right: 12px;
+}
