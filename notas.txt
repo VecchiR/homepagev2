@@ -14,5 +14,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-
+USAR ESSA CLASSE AÍ DE CIMA -> tirar o font-size e criar classes diferentes pra tamanhos diferentes
 tem que corrigir o "open_in_new" (tamanho diferente entre projetos e links do "about")
+
